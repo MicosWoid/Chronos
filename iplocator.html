@@ -177,6 +177,8 @@
                 <button id="locatebutton" class="button"> Locate </button>
             </div>
 
+            <div id="table"></div>
+
             <div class="bottom">
                 <a href="/index.html">Index</a>
                  - 
@@ -247,6 +249,8 @@
 
                 }
 
+                function td(name, value) {return `<tr><td>${name}</td><td>${value}</td></tr>`;}
+
                 document.getElementById("locatebutton").onclick = () => {
 
                     getresource(document.getElementById("ip").value).then((data) => {
@@ -255,12 +259,21 @@
                         const percent = data.data.located_resources[0].locations[0].covered_percentage;
                         const city = data.data.located_resources[0].locations[0].city;
                         const country = data.data.located_resources[0].locations[0].country;
-                        const resourceList = data.data.located_resources[0].locations[0].resources;
+                        const resource = data.data.located_resources[0].locations[0].resources[];
                         const resolution = data.data.parameters.resolution;
 
-                        
+                        let table = `<table>
+                            ${td("Longitude", long)}
+                            ${td("Latitude", lat)}
+                            ${td("Coverage (Percent)", percent)}
+                            ${td("City", city != "" ? city : "City Not Found")}
+                            ${td("Country", country)}
+                            ${td("Resource", resource)}
+                            ${td("Resolution Used", resolution)}
+                        </table>`;
                     })
 
+                    document.getElementById("table").innerHTML = table;
                 }
 
 
