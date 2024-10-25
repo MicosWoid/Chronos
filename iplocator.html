@@ -16,7 +16,7 @@
 
             }
 
-            .table {
+            .tablestyle {
                 display:flex;
                 align-content: space-around;
                 justify-content: space-around;
@@ -269,7 +269,7 @@
                         const resource = data.data.located_resources[0].locations[0].resources[0];
                         const resolution = data.data.parameters.resolution;
 
-                        let tabledata = `<table>
+                        let tabledata = `<table class="tablestyle">
                             ${td("Longitude", long)}
                             ${td("Latitude", lat)}
                             ${td("Coverage (Percent)", percent)}
