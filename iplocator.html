@@ -262,7 +262,7 @@
                         const resource = data.data.located_resources[0].locations[0].resources[0];
                         const resolution = data.data.parameters.resolution;
 
-                        let table = `<table>
+                        let tabledata = `<table>
                             ${td("Longitude", long)}
                             ${td("Latitude", lat)}
                             ${td("Coverage (Percent)", percent)}
@@ -273,7 +273,7 @@
                         </table>`;
                     })
 
-                    document.getElementById("table").innerHTML = table;
+                    document.getElementById("table").innerHTML = tabledata;
                 }
 
 
