@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Header Information for browsers-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index - IPLoc8</title>
+
+        <style>
+
+            body {
+
+                color: white;
+                
+
+            }
+
+            a:link {
+                color: aliceblue;
+            }
+
+            a:visited {
+                color:darkgrey;
+            }
+
+            .background-image {
+
+                /* Add blur and remove white background by scaling it */
+                filter: blur(10px);
+                transform: scale(1.05);
+                
+                /* Position is always @ back */
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                
+                background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1b8ee107345049.5fa4aeae05dc0.gif');
+
+                background-size: cover;
+                background-position: center;
+
+
+                z-index: -1;
+            }
+
+            .white-glass {
+                backdrop-filter: blur(10px);
+                background-color: rgba(100, 100, 100, 0.3);
+                border-radius: 20px;
+            }
+
+            .padded {
+                padding: 20px;
+            }
+
+
+            .header {
+                position: sticky;
+                top: 1vh;
+
+                height: 10vh;
+
+            }
+
+            .title {
+
+                font-family: 'Courier New', Courier, monospace;
+                color: aliceblue;
+
+                font-size: 7vh;
+
+                padding-top: 1.5vh;
+                padding-left: 1vw;
+
+            }
+
+            .choriz {
+                text-align: center;
+            }
+
+            .cvertchoriz {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="background-image"></div>
+
+        <!-- Header -->
+
+        <div class="header white-glass">
+
+            <div class="title">
+                IPLoc8
+            </div>
+
+            <div style="">
+                <a href="/index.html">Index</a>
+                 - 
+                <a href="/iplocator.html">IP Locator</a>
+                 - 
+                <a href="/bulkiplocator.html">Bulk IP Locator</a>
+                 - 
+                <a href="/countryiplistgenerator.html">Country IP List Generator</a>
+                 - 
+                <a href="/aboutus.html">About Us</a>
+            </div>
+
+        </div>
+
+        <div class="cvertchoriz white-glass padded">
+            <h1 class="choriz">Let's <div style="color:green;">locate</div> some <u><i>IPs!</i></u></h1>
+            
+            <div>
+                <a href="/index.html">Index</a>
+                 - 
+                <a href="/iplocator.html">IP Locator</a>
+                 - 
+                <a href="/bulkiplocator.html">Bulk IP Locator</a>
+                 - 
+                <a href="/countryiplistgenerator.html">Country IP List Generator</a>
+                 - 
+                <a href="/aboutus.html">About Us</a>
+            </div>
+    </body>
+</html>
