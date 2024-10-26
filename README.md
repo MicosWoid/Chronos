@@ -1,4 +1,4 @@
-[] Pages: Your website must have at least 3 linked pages.
+[x] Pages: Your website must have at least 3 linked pages.
 
     [x] Index
     [x] IP Locator
