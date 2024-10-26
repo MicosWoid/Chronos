@@ -1,0 +1,162 @@
+
+/* Change all text in body to white */
+body {
+
+    color: white;
+}
+
+.tablestyle {
+    display:flex;
+    align-content: space-around;
+    justify-content: space-around;
+    /*border: solid 1px aliceblue;*/
+}
+
+/* style for td */
+td {
+    border: solid 1px aliceblue;
+    padding: 2px;
+}
+
+/* Make unvisited links white-ish */
+a:link {
+    color: aliceblue;
+}
+
+/* Make visited links gray */
+a:visited {
+    color: lightgray;
+}
+
+/*Blur background image, center and make larger than the screen */
+.background-image {
+
+    /* Add blur and remove white background by scaling it */
+    filter: blur(10px);
+    transform: scale(1.05);
+    
+    /* Position is always @ back */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1b8ee107345049.5fa4aeae05dc0.gif');
+
+    background-size: cover;
+    background-position: center;
+
+
+    z-index: -1;
+}
+
+/* Glassmorphic glass implementation */
+.white-glass {
+    backdrop-filter: blur(10px);
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 20px;
+}
+
+/* Glassmorphic glass implementation with more transparent glass*/
+.weak-white-glass {
+    backdrop-filter: blur(10px);
+    background-color: rgba(50, 50, 50, 0.1);
+    border-radius: 20px;
+    width: 40%;
+    margin: auto;
+}
+
+/*Padding*/
+.padded {
+    padding: 20px;
+}
+
+/*Padding*/
+.weak-padded {
+    padding: 5px;
+}
+
+/* Make text Larger*/
+.bigtext {
+
+    font-size: 40px;
+}
+
+/*Make the header sticky so it follows the movement of content as well as make it larger*/
+.header {
+    position: sticky;
+    top: 1vh;
+
+    height: 10vh;
+
+}
+
+/*Large title, cool font, big size, nice padding */
+
+.title {
+
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+
+    font-size: 7vh;
+
+    padding-top: 1.5vh;
+    padding-left: 1vw;
+
+}
+
+/*align horizontally*/
+
+.choriz {
+    text-align: center;
+    
+}
+
+/*align vertically*/
+
+.cvertchoriz {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Large box to contain all elements*/
+
+.bigbox {
+
+    width: 90%;
+    height: 70%;
+    margin-top: 5vh;
+
+}
+
+/*Nice color when you hover over button*/
+.button:hover {
+    background-color: gray;
+}
+
+/* Make element stick to bottom and align horizontally */
+.bottom {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* make scrollable element on overflow */
+.scrolllist {
+    overflow-y: scroll;
+    height: 20vh;
+}
+
+/* Make map large, take up most of the screen except for the title and the close button and put above all of the other elements */
+.map {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 80vh;
+}

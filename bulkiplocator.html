@@ -6,17 +6,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Set title -->
-        <title>IP Locator - IPLoc8</title>
+        <title>Index - IPLoc8</title>
         <!--Import html-->
         <link rel="stylesheet" href="globalcss.css">
-        <!-- Import mapping script-->
+        <!-- import necessary scripts; defer to wait for all elements to load before running -->
         <script defer src="mappingandlocating.js"></script>
     </head>
 
     <body>
 
         <!-- Div element to hold background image -->
-
         <div class="background-image"></div>
 
         <!-- Header -->
@@ -28,37 +27,34 @@
             </div>
 
         </div>
-
+        
         <!-- Map holder element to contain the map and control visibility -->
-
         <div id="mapholder" class="mapholder" style="visibility: hidden;">
             <button id="closemap" style="width: 100%;">Close Map (scroll outwards to see more)</button>
-            <iframe id="map" class="map" frameborder="0" src="https://www.arcgis.com/"></iframe>
+        <iframe id="map" class="map" frameborder="0" src="https://www.arcgis.com/"></iframe>
         </div>
 
         <!-- Horizontally + Vertically aligned, padded, white glass panel to hold main content-->
-
         <div class="cvertchoriz white-glass padded bigbox">
 
-            <!-- Header title -->
-
-            <div class="weak-white-glass choriz">
+            <div class="weak-white-glass choriz" style="width: 700px;">
                 <h1 class="choriz">
-                    IP Locator 
+                    <div style="font-family:fantasy;">Bulk</div>IP Locator 
                     <img class="choriz" src="https://static.vecteezy.com/system/resources/previews/037/796/676/non_2x/ai-generated-hand-holding-a-magnifying-glass-on-a-transparent-background-free-png.png" width="100px">
                 </h1>
             </div>
+            
 
-            <!-- Horizontally aligned form to enter IP -->
-
+            <!-- Horizontally aligned input form -->
             <div class="choriz">
 
-                <label for="ip"><b>Enter IP address: </b></label>
+                <label for="ip"><b>Enter IP addresses (separated with a newline): </b></label>
 
                 <br>
                 <br>
 
-                <input id="ip" class="choriz" name="ip" type="text" placeholder="1.2.3.4"></input>
+                <textarea id="ip" style="resize:none;" class="choriz" name="ip" type="text" placeholder="1.2.3.4
+5.6.7.8"></textarea>
 
                 <br>
                 <br>
@@ -66,9 +62,10 @@
                 <button id="locatebutton" class="button"> Locate </button>
             </div>
 
-            <!-- Table to store information -->
+            <br>
 
-            <div id="table"></div>
+            <!-- table with table-element named ID to stop conflicts. any overflow is scrolled and the x scroll bar is hidden -->
+            <div id="tableel" class="white-glass" style="overflow: scroll; height: 30vh; overflow-x: hidden;"></div>
 
             <!--Links (all pages must link to each other)-->
 
@@ -85,6 +82,9 @@
                 -
                 <a href="/pricing.html">Pricing</a> <b>$</b>
             </div>
+
+            <!-- element to indicate to bulk locator script to function-->
+            <bulklocator id="bulklocator"></bulklocator>
 
     </body>
 </html>

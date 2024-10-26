@@ -1,0 +1,6 @@
+# I did not think a human would be reading this,
+# strange.
+
+User-Agent: bytespider
+disallow: *
+# Bytespider does not play nice with its targets

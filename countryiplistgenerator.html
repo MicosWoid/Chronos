@@ -5,133 +5,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Set title -->
         <title>Index - IPLoc8</title>
-
-        <style>
-
-            body {
-
-                color: white;
-                
-
-            }
-
-            a:link {
-                color: aliceblue;
-            }
-
-            a:visited {
-                color:darkgrey;
-            }
-
-            .background-image {
-
-                /* Add blur and remove white background by scaling it */
-                filter: blur(10px);
-                transform: scale(1.05);
-                
-                /* Position is always @ back */
-                position: fixed;
-                top: 0px;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                
-                background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1b8ee107345049.5fa4aeae05dc0.gif');
-
-                background-size: cover;
-                background-position: center;
-
-
-                z-index: -1;
-            }
-
-            .white-glass {
-                backdrop-filter: blur(10px);
-                background-color: rgba(100, 100, 100, 0.3);
-                border-radius: 20px;
-            }
-
-            .weak-white-glass {
-                backdrop-filter: blur(10px);
-                background-color: rgba(50, 50, 50, 0.1);
-                border-radius: 20px;
-                width: 40%;
-                margin: auto;
-            }
-
-            .padded {
-                padding: 20px;
-            }
-
-            .weak-padded {
-                padding: 5px;
-            }
-
-
-            .header {
-                position: sticky;
-                top: 1vh;
-
-                height: 10vh;
-
-            }
-
-            .title {
-
-                font-family: 'Courier New', Courier, monospace;
-                color: aliceblue;
-
-                font-size: 7vh;
-
-                padding-top: 1.5vh;
-                padding-left: 1vw;
-
-            }
-
-            .choriz {
-                text-align: center;
-                
-            }
-
-            .cvertchoriz {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            .bigbox {
-
-                width: 90%;
-                height: 70%;
-                margin-top: 5vh;
-
-            }
-
-            .button:hover {
-                background-color: gray;
-            }
-
-            .bottom {
-                position: absolute;
-                bottom: 0;
-                padding-bottom: 10px;
-
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .scrolllist {
-                overflow-y: scroll;
-                height: 20vh;
-            }
-
-
-        </style>
+        <!--Import html-->
+        <link rel="stylesheet" href="globalcss.css">
     </head>
 
     <body>
+
+        <!-- Div element to hold background image -->
 
         <div class="background-image"></div>
 
@@ -143,36 +25,29 @@
                 IPLoc8
             </div>
 
-            <div style="">
-                <a href="/index.html">Index</a>
-                 - 
-                <a href="/iplocator.html">IP Locator</a>
-                 - 
-                <a href="/bulkiplocator.html">Bulk IP Locator</a>
-                 - 
-                <a href="/countryiplistgenerator.html">Country IP List Generator</a>
-                 - 
-                <a href="/aboutus.html">About Us</a>
-            </div>
-
         </div>
+
+        <!-- Horizontally + Vertically aligned, padded, white glass panel to hold main content-->
 
         <div class="cvertchoriz white-glass padded bigbox">
 
-            <div class="weak-white-glass choriz">
+            <!-- Horizontally + Vertically aligned, padded, more transparent glass panel to hold title content + image -->
+            <div class="weak-white-glass choriz" style="width: 700px;">
                 <br>
                 <h1 class="choriz">
                     Country IP List generator
-                    <img class="choriz white-glass padded" src="https://static.vecteezy.com/system/resources/previews/009/314/435/large_2x/dots-world-map-vector-illustration-isolated-free-png.png" width="200px">
+                    <img class="choriz white-glass" src="https://static.vecteezy.com/system/resources/previews/009/314/435/large_2x/dots-world-map-vector-illustration-isolated-free-png.png" width="200px">
                 </h1>
                 <p>Get every single IP in a country</p>
                 <br>
             </div>
             <br>
 
+            <!-- Horizontally aligned input form + href link -->
+
             <div class="choriz">
 
-                <label for="ip"><b>Enter ISO-3166-1 Resource (e.g. CA for Canada): </b></label>
+                <label for="ip"><b>Enter <a href="https://en.wikipedia.org/wiki.ISO_3166-1">ISO-3166-1</a> Resource (e.g. CA for Canada, this may take a while and a few attempts; javascript is not known for being necessarily <i>fast</i>): </b></label>
 
                 <br>
                 <br>
@@ -187,45 +62,35 @@
 
             <br>
 
+            <!-- Scrollable list to hold content -->
+
             <div class="scrolllist white-glass" id="scrolll">
 
                 <ol>
-
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
-                    <li>0.0.0.0/</li>
 
                 </ol>
 
             </div>
 
+            <!--Links (all pages must link to each other)-->
 
             <div class="bottom">
                 <a href="/index.html">Index</a>
-                 - 
-                <a href="/iplocator.html">IP Locator</a>
-                 - 
-                <a href="/bulkiplocator.html">Bulk IP Locator</a>
-                 - 
-                <a href="/countryiplistgenerator.html">Country IP List Generator</a>
-                 - 
+                - 
+                <a href="/iplocator.html">IP Locator</a> <img src="magnifying-glass-3-xxl.png" width="10px">
+                - 
+                <a href="/bulkiplocator.html">Bulk IP Locator</a> <img src="magnifying-glass-3-xxl.png" width="10px"> 
+                - 
+                <a href="/countryiplistgenerator.html">Country IP List Generator</a>  <img src="https://static.vecteezy.com/system/resources/previews/017/195/278/large_2x/note-icon-free-vector.jpg" width="10px">
+                - 
                 <a href="/aboutus.html">About Us</a>
+                -
+                <a href="/pricing.html">Pricing</a> <b>$</b>
             </div>
 
             <script>
 
+                // Function to ping ripe api to grab the list of IPS
                 async function getresource(resource){
 
                     try {
@@ -233,23 +98,27 @@
 
                         const data = await response.json();
 
-                        if (!response.ok) { throw new Error(""); }
+                        if (!response.ok) { throw new Error(""); } // Cause error handling if response fails
 
                         return data;
                     }
 
-                    catch {
+                    catch { // return spoof data with message for user
                         return {"data": {"resources": {"ipv4": ["Error occurred: invalid input, try looking at the <a href=\"https://en.wikipedia.org/wiki/ISO_3166-1\">Wikipedia page</a>."]}}}
                     }
 
                 }
 
+                // get submit button
                 let submit = document.getElementById("locatebutton");
 
+
+                // set submit button click function
                 submit.onclick = () => {
 
-                    submit.innerHTML = "...";
+                    submit.innerHTML = "..."; // set text to "..." to signify loading
 
+                    // get resource (ip in form) then wait for it to finish before using the data
                     getresource(document.getElementById("ip").value).then((data) => {
 
 
@@ -259,13 +128,13 @@
 
                         ipranges.forEach(element => {
                             processedtext += `<li>${element}</li>`;
-                        });
+                        }); // add list element for each IP range
 
                         document.getElementById("scrolll").innerHTML = processedtext;
                         
                     })
 
-                    submit.innerHTML = "Locate";
+                    submit.innerHTML = "Locate"; // revert text to show it is ready to run again
 
                 }
 
