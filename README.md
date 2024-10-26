@@ -45,6 +45,10 @@
         [x] Heading 1 (Who are we)
         [x] Heading 2 (where do we get our data)
 
+    [x] Pricing
+        [x] Heading 1 (10$/month)
+        [x] Heading 2 (100$/month)
+
 [x] Images: You need a minimum of 4 images. Use the image size tags to resize your images as needed. One of your images needs to be turned into a link.
 
     [x] Image 1 (Magnifying glass)
