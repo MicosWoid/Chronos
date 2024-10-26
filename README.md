@@ -5,7 +5,7 @@
     [x] Bulk IP Locator
     [x] Country IP list generator
     [x] About us
-    [] Pricing
+    [x] Pricing
     [x] Robots.txt
 
 [x] Basic Tags: Make sure you have your document set as HTML and have a body of the page defined.
